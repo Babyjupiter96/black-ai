@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #F59E0B; border-radius: 3px; }
+
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(245, 158, 11, 0.12) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #FBBF24, #F59E0B, #D97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(245, 158, 11, 0.04);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.08);
+  transform: translateY(-3px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: #000;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #F59E0B;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: #F59E0B;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(245, 158, 11, 0.4), transparent);
+}
+
+@keyframes orb1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(50px, -30px); }
+  50% { transform: translate(-25px, 55px); }
+  75% { transform: translate(35px, 20px); }
+}
+
+@keyframes orb2 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-55px, 35px); }
+  50% { transform: translate(35px, -45px); }
+  75% { transform: translate(-20px, -20px); }
+}
+
+@keyframes orb3 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(30px, 40px); }
+  66% { transform: translate(-40px, -20px); }
+}
+
+.orb-1 { animation: orb1 12s ease-in-out infinite; }
+.orb-2 { animation: orb2 16s ease-in-out infinite; }
+.orb-3 { animation: orb3 20s ease-in-out infinite; }
